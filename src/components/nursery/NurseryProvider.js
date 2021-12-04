@@ -1,7 +1,7 @@
-import { createContext, useState } from "react"
+import React, { createContext, useState } from "react";
 import { urlBuilder } from "../../helpers/urlBuilder";
 
-export const NurserContext = createContext();
+export const NurseryContext = createContext();
 
 export const NurseryProvider = (props) => {
   
@@ -20,13 +20,14 @@ export const NurseryProvider = (props) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(nursery)
-    }).then(getNurseries)
+    }).then(getNurseries);
   }
 
   return (
-  <NurserContext.Provider value={{
-    nurseries, getNurseries, addNursery
-  }}>
-    {props.children}
-  </NurserContext.Provider>
-)}
+    <NurseryContext.Provider value={{
+      nurseries, getNurseries, addNursery
+    }}>
+      {props.children}
+    </NurseryContext.Provider>
+  );
+}

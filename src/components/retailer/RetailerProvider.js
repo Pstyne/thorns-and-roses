@@ -8,7 +8,7 @@ export const RetailerProvider = (props) => {
   const [retailers, setRetailers] = useState([]);
 
   const getRetailers = () => {
-    return fetch(urlBuilder('retailers'))
+    return fetch(urlBuilder('retailers?_expand=distributor'))
     .then(res => res.json())
     .then(setRetailers);
   }

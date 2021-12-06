@@ -6,6 +6,7 @@ import { NurseryList } from "./components/nursery/NurseryList";
 import { NurseryProvider } from "./components/nursery/NurseryProvider";
 import { NurseryDistributorProvider } from "./components/nurserydistributor/NurseryDistributorProvider";
 import { NurseryFlowerProvider } from "./components/nurseryflower/NurseryFlowerProvider";
+import { RetailerList } from "./components/retailer/RetailerList";
 import { RetailerProvider } from "./components/retailer/RetailerProvider";
 import { Home } from "./Home";
 
@@ -20,7 +21,7 @@ export const ApplicationViews = () => (
                 <Route path="/" element={<Home />} />
                 <Route path="/nurseries" element={<NurseryList />} />
                 <Route path="/distributors" element={<DistributorList />} />
-                <Route path="/retailers" element={<div>retailers</div>} />
+                <Route path="/retailers" element={<RetailerList />} />
               </Routes>
             </RetailerProvider>
           </NurseryFlowerProvider>

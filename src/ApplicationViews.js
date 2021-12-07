@@ -8,27 +8,31 @@ import { NurseryDistributorProvider } from "./components/nurserydistributor/Nurs
 import { NurseryFlowerProvider } from "./components/nurseryflower/NurseryFlowerProvider";
 import { RetailerList } from "./components/retailer/RetailerList";
 import { RetailerProvider } from "./components/retailer/RetailerProvider";
+import { ShoppingCart } from "./components/shoppingcart/ShoppingCart";
+import { ShoppingCartProvider } from "./components/shoppingcart/ShoppingCartProvider";
 import { Home } from "./Home";
 
 export const ApplicationViews = () => (
-  
-  <NurseryProvider>
-    <DistributorProvider>
-      <FlowerProvider>
-        <NurseryDistributorProvider>
-          <NurseryFlowerProvider>
-            <RetailerProvider>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/nurseries" element={<NurseryList />} />
-                <Route path="/distributors" element={<DistributorList />} />
-                <Route path="/retailers" element={<RetailerList />} />
-              </Routes>
-            </RetailerProvider>
-          </NurseryFlowerProvider>
-        </NurseryDistributorProvider>
-      </FlowerProvider>
-    </DistributorProvider>
-  </NurseryProvider>
+  <ShoppingCartProvider>
+    <NurseryProvider>
+      <DistributorProvider>
+        <FlowerProvider>
+          <NurseryDistributorProvider>
+            <NurseryFlowerProvider>
+              <RetailerProvider>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/nurseries" element={<NurseryList />} />
+                  <Route path="/distributors" element={<DistributorList />} />
+                  <Route path="/retailers" element={<RetailerList />} />
+                  <Route path="/shoppingcart" element={<ShoppingCart />} />
+                </Routes>
+              </RetailerProvider>
+            </NurseryFlowerProvider>
+          </NurseryDistributorProvider>
+        </FlowerProvider>
+      </DistributorProvider>
+    </NurseryProvider>
+  </ShoppingCartProvider>
   
 )

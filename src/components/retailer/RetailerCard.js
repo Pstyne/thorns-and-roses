@@ -8,8 +8,10 @@ export const RetailerCard = ({ retailer, flowers, nurseries }) => {
       <h3>Flowers</h3>
       {
         flowers.map(flower => {
-          return (<div key={flower.id}>
+          return (
+          <div key={flower.id}>
             {flower.name} ({flower.color}) ${markupRetailPrice(flower.price, retailer.markupPercentage, retailer.distributor.markupPercentage)}
+            <button>Purchase</button>
           </div>
         )})
       }

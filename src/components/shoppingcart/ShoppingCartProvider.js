@@ -5,9 +5,11 @@ export const ShoppingCartContext = createContext();
 
 export const ShoppingCartProvider = (props) => {
   const [ cart, setCart ] = useState([]);
+  const currentCustomer = localStorage.getItem('thorns_roses_customer');
   
   const getCart = () => {
-    return fetch(urlBuilder('shoppingcart'))
+    return fetch(urlBuilder(`shoppingcart?customerId=${currentCustomer}&_expand=flower`))
+    .then(res => res.json())
     .then(setCart);
   }
 

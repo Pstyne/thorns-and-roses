@@ -9,11 +9,10 @@ import { NurseryFlowerProvider } from "./components/nurseryflower/NurseryFlowerP
 import { RetailerList } from "./components/retailer/RetailerList";
 import { RetailerProvider } from "./components/retailer/RetailerProvider";
 import { ShoppingCart } from "./components/shoppingcart/ShoppingCart";
-import { ShoppingCartProvider } from "./components/shoppingcart/ShoppingCartProvider";
 import { Home } from "./Home";
 
 export const ApplicationViews = () => (
-  <ShoppingCartProvider>
+  
     <NurseryProvider>
       <DistributorProvider>
         <FlowerProvider>
@@ -33,6 +32,6 @@ export const ApplicationViews = () => (
         </FlowerProvider>
       </DistributorProvider>
     </NurseryProvider>
-  </ShoppingCartProvider>
+  
   
 )

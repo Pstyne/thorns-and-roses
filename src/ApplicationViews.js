@@ -11,6 +11,7 @@ import { RetailerProvider } from "./components/retailer/RetailerProvider";
 import { Home } from "./Home";
 
 export const ApplicationViews = () => (
+  
   <NurseryProvider>
     <DistributorProvider>
       <FlowerProvider>
@@ -29,4 +30,5 @@ export const ApplicationViews = () => (
       </FlowerProvider>
     </DistributorProvider>
   </NurseryProvider>
+  
 )
